@@ -59,7 +59,7 @@ public class Main {
         System.out.println("---------------------");
         System.out.println("With this method I demonstrate the usage of the Stack class:");
 
-        Stack<Integer> stack = new Stack<>(5);
+        Stack<Integer> stack = new Stack<>();
         stack.push(1);
         stack.push(2);
         stack.push(3);
@@ -77,10 +77,11 @@ public class Main {
         System.out.println("---------------------");
         System.out.println("With this method I demonstrate the usage of the Queue class:");
 
-        Queue<Integer> queue = new Queue<>(5);
+        Queue<Integer> queue = new Queue<>();
         queue.add(1);
         queue.add(2);
         queue.add(3);
+        System.out.println("Queue elements are: ");
         queue.list(); // Display the elements in the queue
 
         int removedElement = queue.remove();
@@ -88,6 +89,9 @@ public class Main {
 
         int frontElement = queue.get();
         System.out.println("Front element: " + frontElement);
+
+        System.out.println("Queue elements after removal:");
+        queue.list();
 
 //        boolean isEmpty = queue.isEmpty();
         System.out.println("Is the queue empty? " + isEmpty); // isEmpty here will be returned as "true" or "false"
