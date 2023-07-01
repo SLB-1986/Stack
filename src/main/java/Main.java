@@ -6,16 +6,12 @@ import java.util.List;
  * Assignments:
  * Write a class that simulates a stack
  * and a FIFO (first in first out) queue using generics and arrays.
- *
  * For the previous classes add the following operations: add, remove, get, list and isEmpty.
- *
  * Create a User class that implements Comparable.
  * Write a class that demonstrates how sorting works on an array of Users.
- *
  * Using a HashMap collection implementation, create a dictionary console application.
  * Read the word definitions from a JSON file on disk.
  * Chose the JSON structure and class model that best suites your approach.
- *
  * Write a method that can determine whether two lists are equal or not.
  * The lists will be considered equal if they contain the same elements, regardless of their order.
  */
