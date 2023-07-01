@@ -6,16 +6,16 @@ import java.util.List;
  * Assignments:
  * Write a class that simulates a stack
  * and a FIFO (first in first out) queue using generics and arrays.
- * <p>
+ *
  * For the previous classes add the following operations: add, remove, get, list and isEmpty.
- * <p>
+ *
  * Create a User class that implements Comparable.
  * Write a class that demonstrates how sorting works on an array of Users.
- * <p>
+ *
  * Using a HashMap collection implementation, create a dictionary console application.
  * Read the word definitions from a JSON file on disk.
  * Chose the JSON structure and class model that best suites your approach.
- * <p>
+ *
  * Write a method that can determine whether two lists are equal or not.
  * The lists will be considered equal if they contain the same elements, regardless of their order.
  */
@@ -28,9 +28,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("Users in the list: ");
-        /* With this method I demonstrate the usage of the Stack class.*/
-        System.out.println("---------------------");
+        System.out.println("With this method I demonstrate the usage of the Stack class:");
 
         User[] users = {
                 new User("First User"),
@@ -39,7 +37,6 @@ public class Main {
                 new User("Other User"),
                 new User("This User")
         };
-
 
         Arrays.sort(users);
 
@@ -59,8 +56,8 @@ public class Main {
             System.out.println(user1.getName() + " and " + user2.getName() + " are equal");
         }
 
-        System.out.println("StacK class");
-        /* With this method I demonstrate the usage of the Stack class.*/
+        System.out.println("---------------------");
+        System.out.println("With this method I demonstrate the usage of the Stack class:");
 
         Stack<Integer> stack = new Stack<>(5);
         stack.push(1);
@@ -77,8 +74,8 @@ public class Main {
         boolean isEmpty = stack.isEmpty();
         System.out.println("Is the stack empty? " + isEmpty); // isEmpty here will be returned as "true" or "false"
 
-        System.out.println("Queue class");
-        /* With this method I demonstrate the usage of the Queue class.*/
+        System.out.println("---------------------");
+        System.out.println("With this method I demonstrate the usage of the Queue class:");
 
         Queue<Integer> queue = new Queue<>(5);
         queue.add(1);
@@ -95,7 +92,8 @@ public class Main {
 //        boolean isEmpty = queue.isEmpty();
         System.out.println("Is the queue empty? " + isEmpty); // isEmpty here will be returned as "true" or "false"
 
-        System.out.println("List equality class");
+        System.out.println("---------------------");
+        System.out.println("With this method I demonstrate the usage of the ListEquality class:");
 
         List<Integer> list1 = new ArrayList<>(); // creating a list1 with some values of type int to be compared with a similar list2
         list1.add(1);
@@ -111,8 +109,8 @@ public class Main {
         // If list one and list two are equal will return true, otherwise is false
         System.out.println("Are the lists equal? " + isEqual); // isEqual here will be returned as "true" or "false"
 
-        System.out.println("Dictionary app class");
-        /* With this method I demonstrate the usage of the DictionaryApp class.*/
+        System.out.println("---------------------");
+        System.out.println("With this method I demonstrate the usage of the DictionaryApp class:");
 
         DictionaryApp dictionaryApp = new DictionaryApp();
 
