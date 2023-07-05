@@ -127,8 +127,23 @@ public class Main {
 
         dictionaryApp.listAllWords();
 
-//        boolean isEmpty = dictionaryApp.isEmpty();
-        System.out.println("Is the dictionary empty? " + isEmpty); // isEmpty here will be returned as "true" or "false"
+        System.out.println("---------------------");
+        System.out.println("With this methods I demonstrate the usage of the JSON for User class:");
+        System.out.println("Json serialize User: ");
+
+        User user = new User("1"); // Create a User object with the desired user number
+        JSON.serializeUserToJson(user);
+        JSON.serializeUserToJson(user1);
+        JSON.serializeUserToJson(user2);
+        System.out.println("Json serialize User: ");
+
+        String json = "{\"userName\":\"1, Json String\"}"; // Replace with your actual JSON string
+        JSON.processUserJson(json);
+        String json2 = "{\"userName\":\"You as User, Json String\"}";
+        JSON.processUserJson(json2);
+        String json1 = "{\"userName\":\"Name as User, Json String\"}";
+        JSON.processUserJson(json1);
+
 
     }
 }

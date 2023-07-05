@@ -2,6 +2,9 @@
 public class User implements Comparable<User> {
     private String name; // user as defined in main ""
 
+    public User() {
+    } // default constructor
+
     public User(String name) {
         this.name = name; // constructor
     }
