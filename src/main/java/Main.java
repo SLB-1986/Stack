@@ -118,9 +118,23 @@ public class Main {
 
         DictionaryApp dictionaryApp = new DictionaryApp();
 
-        dictionaryApp.addDefinition("apple", "a fruit");
-        dictionaryApp.addDefinition("car", "a vehicle");
-        dictionaryApp.addDefinition("book", "a written work");
+        dictionaryApp.addDefinition("apple", "noun\n" +
+                "A quick stamp of the foot used in fencing as a feint to produce an opening.\n" +
+                "A stroke on the opponent's foil or sword designed to notify him that the bout is to begin.\n" +
+                "The stamping of the foot during ceremonial salutes prior to the bout. See salute.");
+        dictionaryApp.addDefinition("car", "noun\n" +
+                "An automobile.\n" +
+                "A vehicle, such as a streetcar, that runs on rails.\n" +
+                "A boxlike enclosure for passengers and freight on a conveyance.");
+        dictionaryApp.addDefinition("book", "noun\n" +
+                "A set of written, printed, or blank pages fastened along one side and encased between protective covers.\n" +
+                "An e-book or other electronic resource structured like a book.\n" +
+                "A printed or written literary work.");
+        dictionaryApp.addDefinition("human", "noun\n" +
+                "A member of the primate genus Homo, especially a member of the species Homo sapiens, distinguished from other apes by a large brain and the capacity for speech.\n" +
+                "A person.\n" +
+                "adjective\n" +
+                "Of, relating to, or characteristic of humans.");
 
         String appleDefinition = dictionaryApp.getDefinition("apple");
         System.out.println("Definition of 'apple': " + appleDefinition);
@@ -129,6 +143,43 @@ public class Main {
 
 //        boolean isEmpty = dictionaryApp.isEmpty();
         System.out.println("Is the dictionary empty? " + isEmpty); // isEmpty here will be returned as "true" or "false"
+
+        System.out.println("---------------------");
+        System.out.println("With this methods I demonstrate the usage of the JSON for User class:");
+
+        System.out.println("Serializing and deserializing using JSON:");
+
+        User user = new User("Vlad Dracul");
+        JSON.serializeUserToJson(user);
+
+        String json = "{\"name\":\"Vlad Dracul, is Dracula\"}";
+        JSON.processUserJson(json);
+        String json0 = "{\"name\":\"First User, is on the zero position\"}";
+        JSON.processUserJson(json0);
+        String json1 = "{\"name\":\"Second User, is on the first position\"}";
+        JSON.processUserJson(json1);
+        String json2 = "{\"name\":\"Third User, is on the second position\"}";
+        JSON.processUserJson(json2);
+        String json3 = "{\"name\":\"Other User, is on other position\"}";
+        JSON.processUserJson(json3);
+        String json4 = "{\"name\":\"This User, is on this position\"}";
+        JSON.processUserJson(json4);
+        System.out.println("---------------------");
+
+        System.out.println("With this methods I demonstrate the usage of the XML for User class:");
+
+        System.out.println("Marshaling using XML:");
+
+//        User user3 = new User("New User");
+//        XML xmlUser = new XML();
+//
+//        xmlUser.marshalUser(user);
+//        xmlUser.marshalUser(user1);
+//        xmlUser.marshalUser(user2);
+//        xmlUser.marshalUser(user3);
+//
+//        User unmarshaledUser = xmlUser.unmarshalUser();
+//        System.out.println("Unmarshaled User Name: " + unmarshaledUser.getName() + ".");
 
     }
 }

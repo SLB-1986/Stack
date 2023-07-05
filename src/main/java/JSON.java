@@ -12,9 +12,8 @@ public class JSON {
     public static void processUserJson(String json) {
         JSON jsonParser = new JSON();
         User user = jsonParser.deserializeUser(json);
-        // Perform further processing with the user object
         String userName = user.getName();
-        System.out.println("User Name: " + userName); // Accessing the user number and printing it
+        System.out.println("User Name: " + userName);
     }
 
     public String serializeUser(User user) {
@@ -28,19 +27,10 @@ public class JSON {
 
     public User deserializeUser(String jsonRepresentation) {
         try {
-<<<<<<< HEAD
             return this.objectMapper.readValue(jsonRepresentation, User.class);
-=======
-            return (User) this.objectMapper.readValue(jsonRepresentation, User.class);
->>>>>>> origin/master
         } catch (Exception e) {
             e.printStackTrace();
             return new User("");
         }
     }
-<<<<<<< HEAD
 }
-=======
-
-}
->>>>>>> origin/master
