@@ -1,8 +1,8 @@
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.Marshaller;
+import javax.xml.bind.Unmarshaller;
 import java.io.File;
 import java.io.FileReader;
-
 
 public class XML {
     public void marshalUser(User user) {
@@ -19,7 +19,8 @@ public class XML {
     public User unmarshalUser() {
         try {
             JAXBContext context = JAXBContext.newInstance(User.class);
-            return (User) context.createUnmarshaller().unmarshal(new FileReader("user.xml"));
+            Unmarshaller unmarshaller = context.createUnmarshaller();
+            return (User) unmarshaller.unmarshal(new File("user.xml"));
         } catch (Exception e) {
             e.printStackTrace();
             return null;
