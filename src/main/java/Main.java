@@ -151,14 +151,14 @@ public class Main {
         JSON.serializeUserToJson(user1);
         JSON.serializeUserToJson(user2);
 
-        System.out.println("Json deserialize User: ");
-
-        String json = "{\"userName\": \"1 (One), Json String\"}"; // Replace with your actual JSON string
-        JSON.processUserJson(json);
-        String json1 = "{\"userName\": \"Name as User, Json String\"}";
-        JSON.processUserJson(json1);
-        String json2 = "{\"userName\": \"You as User, Json String\"}";
-        JSON.processUserJson(json2);
+//        System.out.println("Json deserialize User: ");
+//
+//        String json = "{\"userName\": \"1 (One), Json String\"}"; // Replace with your actual JSON string
+//        JSON.processUserJson(json);
+//        String json1 = "{\"userName\": \"Name as User, Json String\"}";
+//        JSON.processUserJson(json1);
+//        String json2 = "{\"userName\": \"You as User, Json String\"}";
+//        JSON.processUserJson(json2);
 
         System.out.println("---------------------");
         System.out.println("With this methods I demonstrate the usage of the XML for User class:");

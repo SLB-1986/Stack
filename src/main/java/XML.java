@@ -3,6 +3,7 @@ import javax.xml.bind.Marshaller;
 import java.io.File;
 import java.io.FileReader;
 
+
 public class XML {
     public void marshalUser(User user) {
         try {
