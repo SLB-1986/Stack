@@ -118,61 +118,17 @@ public class Main {
 
         DictionaryApp dictionaryApp = new DictionaryApp();
 
-        dictionaryApp.addDefinition("apple", "noun\n" +
-                "A cultivated deciduous tree (Malus domestica or M. pumila) in the rose family, native to Eurasia and having alternate simple leaves and white or pink flowers.\n" +
-                "The firm, edible, usually rounded fruit of this tree.\n" +
-                "Any of several other plants, especially those with fruits suggestive of the apple, such as the crabapple or custard apple.");
-        dictionaryApp.addDefinition("car", "noun\n" +
-                "An automobile.\n" +
-                "A vehicle, such as a streetcar, that runs on rails.\n" +
-                "A boxlike enclosure for passengers and freight on a conveyance.");
-        dictionaryApp.addDefinition("book", "noun\n" +
-                "A set of written, printed, or blank pages fastened along one side and encased between protective covers.\n" +
-                "An e-book or other electronic resource structured like a book.\n" +
-                "A printed or written literary work.");
-        dictionaryApp.addDefinition("human", "noun\n" +
-                "A member of the primate genus Homo, especially a member of the species Homo sapiens, distinguished from other apes by a large brain and the capacity for speech.\n" +
-                "A person.\n" +
-                "adjective\n" +
-                "Of, relating to, or characteristic of humans.");
+        dictionaryApp.addDefinition("apple", "a fruit");
+        dictionaryApp.addDefinition("car", "a vehicle");
+        dictionaryApp.addDefinition("book", "a written work");
 
         String appleDefinition = dictionaryApp.getDefinition("apple");
         System.out.println("Definition of 'apple': " + appleDefinition);
 
         dictionaryApp.listAllWords();
 
-        System.out.println("---------------------");
-        System.out.println("With this methods I demonstrate the usage of the JSON for User class:");
-
-        System.out.println("Json serialize User: ");
-
-        User user = new User("1"); // Create a User object with the desired user number
-        JSON.serializeUserToJson(user);
-        JSON.serializeUserToJson(user1);
-        JSON.serializeUserToJson(user2);
-
-//        System.out.println("Json deserialize User: ");
-//
-//        String json = "{\"userName\": \"1 (One), Json String\"}"; // Replace with your actual JSON string
-//        JSON.processUserJson(json);
-//        String json1 = "{\"userName\": \"Name as User, Json String\"}";
-//        JSON.processUserJson(json1);
-//        String json2 = "{\"userName\": \"You as User, Json String\"}";
-//        JSON.processUserJson(json2);
-
-        System.out.println("---------------------");
-        System.out.println("With this methods I demonstrate the usage of the XML for User class:");
-
-        System.out.println("Writing using xml: ");
-        User user3 = new User("New User");
-        XML xmlUser = new XML();
-        xmlUser.marshalUser(user);
-        xmlUser.marshalUser(user1);
-        xmlUser.marshalUser(user2);
-        xmlUser.marshalUser(user3);
-
-        User unmarshalledUser = xmlUser.unmarshalUser();
-        System.out.println("Read from XML, person with name: " + unmarshalledUser.getName() + ".");
+//        boolean isEmpty = dictionaryApp.isEmpty();
+        System.out.println("Is the dictionary empty? " + isEmpty); // isEmpty here will be returned as "true" or "false"
 
     }
 }

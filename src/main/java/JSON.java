@@ -28,10 +28,19 @@ public class JSON {
 
     public User deserializeUser(String jsonRepresentation) {
         try {
+<<<<<<< HEAD
             return this.objectMapper.readValue(jsonRepresentation, User.class);
+=======
+            return (User) this.objectMapper.readValue(jsonRepresentation, User.class);
+>>>>>>> origin/master
         } catch (Exception e) {
             e.printStackTrace();
             return new User("");
         }
     }
+<<<<<<< HEAD
 }
+=======
+
+}
+>>>>>>> origin/master
